@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gbrsni.votoelettronico.controller.LoginController">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="132.0" prefWidth="810.0" text="LOGIN" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Visualizza Sessioni di Voto Scrutinate:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="sessioniButton" mnemonicParsing="false" onAction="#pressSessioniButton" prefHeight="43.0" prefWidth="91.0" text="Sessioni">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="0.0" text="Tipologia Utente: ">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="utenteComboBox" prefHeight="39.0" prefWidth="163.0" promptText="scegli utente..." visibleRowCount="2" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="137.0" prefWidth="900.0">
+               <children>
+                  <Label text="Username: ">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameTextField" prefHeight="30.0" prefWidth="250.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="139.0" prefWidth="900.0">
+               <children>
+                  <Label text="Password:">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordTextField" prefWidth="250.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></PasswordField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="erroreLabel" text="Dati inseriti scorretti" textFill="#f60000" visible="false">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="loginButton" mnemonicParsing="false" onAction="#pressLoginButton" text="Login">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="100.0" left="50.0" right="50.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
